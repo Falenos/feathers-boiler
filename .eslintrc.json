@@ -15,7 +15,8 @@
   ],
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "prettier/prettier": [
@@ -26,15 +27,15 @@
     ],
     "indent": [
       "error",
-      2
+      4
+    ],
+    "semi": [
+      "error",
+      "never"
     ],
     "linebreak-style": [
       "error",
       "unix"
-    ],
-    "semi": [
-      "error",
-      "always"
     ],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-interface": "off"
