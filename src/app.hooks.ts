@@ -1,6 +1,12 @@
 // Application hooks that run for every service
 // Don't remove this comment. It's needed to format import lines nicely.
 
+import { HookContext } from '@feathersjs/feathers'
+
+const logError = (context: HookContext): void => {
+    console.error(context.path, context.method, context.error.message)
+}
+
 export default {
     before: {
         all: [],
@@ -23,7 +29,7 @@ export default {
     },
 
     error: {
-        all: [],
+        all: [logError],
         find: [],
         get: [],
         create: [],
