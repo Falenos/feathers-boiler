@@ -10,12 +10,20 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "extends": [
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
     "indent": [
       "error",
       2
@@ -23,10 +31,6 @@
     "linebreak-style": [
       "error",
       "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
     ],
     "semi": [
       "error",
